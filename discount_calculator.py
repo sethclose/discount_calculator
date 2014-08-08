@@ -3,9 +3,13 @@ def calculate_discount(item_cost, relative_discount, absolute_discount):
     Given the cost of an item, deduct the absolute discount.
     Then, deduct the percentage discount ("relative")
     """
+    #import pdb; pdb.set_trace()
     final_cost = item_cost
-    final_cost -= item_cost * (relative_discount / 100)
+    #import pdb; pdb.set_trace()
+    final_cost -= item_cost * (relative_discount / 100.00)
+    #import pdb; pdb.set_trace()
     final_cost -= absolute_discount
+    #import pdb; pdb.set_trace()
 
     if item_cost <= 0 :
         raise ValueError("Item has no original cost. Give it away.")
